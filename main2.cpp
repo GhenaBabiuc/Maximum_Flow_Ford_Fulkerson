@@ -61,9 +61,9 @@ int fordFulkerson(int graph[V][V], int s, int t) {
 
         cout << "Calea de crestere gasita: ";
         for (int i = path.size() - 1; i > 0; --i) {
-            cout << path[i] << " -> ";
+            cout << path[i] + 1 << " -> ";
         }
-        cout << path[0] << " cu fluxul: " << path_flow << endl;
+        cout << path[0] + 1 << " cu fluxul: " << path_flow << endl;
 
         for (v = t; v != s; v = parent[v]) {
             u = parent[v];
@@ -80,7 +80,7 @@ int fordFulkerson(int graph[V][V], int s, int t) {
 int main() {
     int graph[V][V] = {0};
     int m, n;
-    ifstream fin("../flux.in");
+    ifstream fin("../flux2.in");
     fin >> n >> m;
 
     int a, b, cap;
